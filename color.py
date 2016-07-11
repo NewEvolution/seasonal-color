@@ -1,9 +1,10 @@
 import unittest
+from person import Person
 
-class TestPerson:
+class TestPerson(unittest.TestCase):
 
     @classmethod
-    def classSetup(self):
+    def setUpClass(self):
         self.a_person = Person()
 
     def test_skin_tone_default_value_is_empty_string(self):
@@ -32,3 +33,6 @@ class TestPerson:
         self.assertEqual(self.a_person.match_season_to_palette('spring'), ['536F', '847K', '243A'])
         self.assertEqual(self.a_person.match_season_to_palette('summer'), ['948G', '915T', '256F'])
         self.assertEqual(self.a_person.match_season_to_palette('fall'), ['822S', '363G', '543K'])
+
+if __name__ == '__main__':
+    unittest.main()
