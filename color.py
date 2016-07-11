@@ -2,6 +2,10 @@ import unittest
 
 class TestPerson:
 
+    @classmethod
+    def classSetup(self):
+        self.a_person = Person()
+
     def test_skin_tone_default_value_is_empty_string(self):
         self.assertEqual(self.a_person.skin_tone, '')
 
