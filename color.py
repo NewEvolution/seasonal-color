@@ -26,3 +26,9 @@ class TestPerson:
 
     def test_match_green_to_fall(self):
         self.assertEqual(self.a_person.match_color_to_season('green'), 'fall')
+
+    def test_match_season_to_palette(self):
+        self.assertEqual(self.a_person.match_season_to_palette('winter'), ['325C', '608D', '323A'])
+        self.assertEqual(self.a_person.match_season_to_palette('spring'), ['536F', '847K', '243A'])
+        self.assertEqual(self.a_person.match_season_to_palette('summer'), ['948G', '915T', '256F'])
+        self.assertEqual(self.a_person.match_season_to_palette('fall'), ['822S', '363G', '543K'])
