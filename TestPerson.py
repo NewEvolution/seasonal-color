@@ -8,13 +8,16 @@ class TestPerson(unittest.TestCase):
         self.a_person = Person()
 
     def test_skin_tone_default_value_is_empty_string(self):
-        self.assertEqual(self.a_person.skin_tone, '')
+        a_person = Person()
+        self.assertEqual(a_person.skin_tone, '')
 
     def test_skin_undertone_default_value_is_empty_string(self):
-        self.assertEqual(self.a_person.skin_undertone, '')
+        a_person = Person()
+        self.assertEqual(a_person.skin_undertone, '')
 
     def test_season_value_is_empty_string(self):
-        self.assertEqual(self.a_person.season, '')
+        a_person = Person()
+        self.assertEqual(a_person.season, '')
 
     def test_match_yellow_to_winter(self):
         self.assertEqual(self.a_person.match_color_to_season('yellow'), 'winter')
